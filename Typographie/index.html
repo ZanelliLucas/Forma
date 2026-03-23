@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typographie</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+
+  <!-- BARRE DE PROGRESSION -->
+  <div class="rpbar" id="progress"></div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-logo">FOR<span>M</span>A</div>
+    <div class="nav-cats">
+      <a href="../Architecture/index.html">Architecture</a>
+      <a href="../Interieur/index.html">Intérieur</a>
+      <a href="index.html" class="active">Typographie</a>
+      <a href="../Photographie/index.html">Photographie</a>
+      <a href="../Marques/index.html">Marques</a>
+      <a href="../Art/index.html">Art</a>
+    </div>
+    <div class="nav-right">
+      <button class="btn-theme" id="themeToggle" title="Changer de thème" aria-label="Basculer mode sombre">
+        <span class="btn-theme-icon">
+          <!-- Soleil (light) -->
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="8" y1="1" x2="8" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="8" y1="13" x2="8" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="1" y1="8" x2="3" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="13" y1="8" x2="15" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="2.93" y1="2.93" x2="4.34" y2="4.34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="11.66" y1="11.66" x2="13.07" y2="13.07" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="2.93" y1="13.07" x2="4.34" y2="11.66" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="11.66" y1="4.34" x2="13.07" y2="2.93" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <!-- Lune (dark) -->
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M13.5 10.5A6 6 0 0 1 5.5 2.5a6 6 0 1 0 8 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </button>
+      <button class="btn-sub">S'abonner</button>
+    </div>
+  </nav>
+
+  <!-- EN-TÊTE DE RUBRIQUE -->
+  <div class="section-header">
+    <div class="sh-left">
+      <span class="sh-badge">Rubrique</span>
+      <h1 class="sh-title">Typographie</h1>
+      <p class="sh-sub">Fontes, formes, sens — quand les lettres deviennent architecture.</p>
+    </div>
+    <div class="sh-right">
+      <div class="sh-stat"><span class="sh-n">98</span><span class="sh-l">articles</span></div>
+      <div class="sh-stat"><span class="sh-n">12</span><span class="sh-l">dossiers</span></div>
+      <div class="sh-stat"><span class="sh-n">31K</span><span class="sh-l">lecteurs</span></div>
+    </div>
+  </div>
+
+  <!-- ARTICLE À LA UNE -->
+  <section class="featured">
+    <div class="feat-visual">
+      <div class="feat-art">
+        <img src="/Image/typ-une.png" alt="Variable fonts — lettres animées" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+      </div>
+      <div class="feat-label">À la Une</div>
+      <div class="feat-num">01</div>
+    </div>
+    <div class="feat-content">
+      <div class="feat-meta">
+        <span class="cat-tag">Typographie</span>
+        <span class="msep">·</span>
+        <span class="mdate">1 mars 2026</span>
+        <span class="msep">·</span>
+        <span class="mdate">11 min</span>
+      </div>
+      <h1 class="feat-title">La lettre<br><em>vivante</em> :<br>variable fonts</h1>
+      <p class="feat-excerpt">
+        Les polices variables ne sont plus un gadget technique — elles redéfinissent la relation entre
+        le dessin de caractère, l'animation et l'émotion. Une révolution silencieuse et profonde est en cours.
+      </p>
+      <div class="feat-author">
+        <div class="avatar">ET</div>
+        <div>
+          <p class="a-name">Emma Torres</p>
+          <p class="a-role">Rédactrice Typographie</p>
+        </div>
+      </div>
+      <a href="#" class="read-link">Lire l'article →</a>
+    </div>
+  </section>
+
+  <!-- FILTRE THÈMES -->
+  <div class="filter-bar">
+    <span class="fb-label">Thèmes</span>
+    <div class="fb-tags">
+      <button class="fb-btn active">Tout voir</button>
+      <button class="fb-btn">Serif</button>
+      <button class="fb-btn">Sans-serif</button>
+      <button class="fb-btn">Variable</button>
+      <button class="fb-btn">Lettering</button>
+      <button class="fb-btn">Histoire</button>
+      <button class="fb-btn">Web</button>
+    </div>
+  </div>
+
+  <!-- GRILLE PRINCIPALE + SIDEBAR -->
+  <div class="content-grid">
+    <div class="main-feed">
+      <div class="feed-label">
+        <h3>Articles récents</h3>
+        <div class="fl-line"></div>
+      </div>
+
+      <!-- Article large -->
+      <div class="art-card lg" data-tags="serif">
+        <div class="c-visual">
+          <div class="c-img typ1" style="height:260px;">
+            <img src="/Image/typ-serif.png" alt="Renaissance du serif" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag hl">Dossier 2026</span>
+            <span class="ctag">Serif</span>
+          </div>
+          <h2 class="c-title">Renaissance du serif : comment les grandes fonderies réinventent la lettre classique pour nos écrans</h2>
+          <p class="c-exc">Klim, Optimo, Commercial Type — une nouvelle génération de dessinateurs de caractères remet à plat 400 ans d'héritage romain pour l'ère des écrans haute résolution.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Emma Torres</strong></div>
+            <span class="c-rt">13 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 1 -->
+      <div class="art-card" data-tags="variable">
+        <div class="c-visual">
+          <div class="c-img typ2">
+            <img src="/Image/typ-variable.png" alt="Polices variables" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags"><span class="ctag">Variable</span></div>
+          <h2 class="c-title">Polices variables : le guide complet pour les intégrer à vos projets web en 2026</h2>
+          <p class="c-exc">Axes de variation, performances, compatibilité — tout ce qu'un designer doit savoir avant de basculer.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Julien Marais</strong></div>
+            <span class="c-rt">8 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="art-card" data-tags="histoire">
+        <div class="c-visual">
+          <div class="c-img typ3">
+            <img src="/Image/typ-bauhaus.png" alt="Bauhaus typographie" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag">Histoire</span>
+            <span class="ctag">Bauhaus</span>
+          </div>
+          <h2 class="c-title">Herbert Bayer et l'alphabet universel : l'utopie typographique du Bauhaus revisitée</h2>
+          <p class="c-exc">Un siècle après l'école de Dessau, l'idée d'une typographie fonctionnelle résonne encore dans nos interfaces.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Luise Keller</strong></div>
+            <span class="c-rt">10 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 3 -->
+      <div class="art-card" data-tags="sans-serif">
+        <div class="c-visual">
+          <div class="c-img typ4">
+            <img src="/Image/typ-grotesk.png" alt="Grotesk vs Humaniste" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags"><span class="ctag">Sans-serif</span></div>
+          <h2 class="c-title">Grotesk vs Humaniste : quel sans-serif choisir pour vos projets éditoriaux ?</h2>
+          <p class="c-exc">De l'Helvetica au Söhne, du Futura au Aktiv Grotesk — comprendre les familles pour faire des choix éclairés.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Emma Torres</strong></div>
+            <span class="c-rt">7 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 4 -->
+      <div class="art-card" data-tags="lettering">
+        <div class="c-visual">
+          <div class="c-img typ5">
+            <img src="/Image/typ-lettering.png" alt="Lettering à la main" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag">Lettering</span>
+            <span class="ctag">Interview</span>
+          </div>
+          <h2 class="c-title">Marion Deslandes : « Le lettering à la main, c'est remettre l'imperfection au centre »</h2>
+          <p class="c-exc">La calligraphe raconte comment son travail à la main nourrit un univers de marques internationales.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Paul Renaud</strong></div>
+            <span class="c-rt">9 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 5 -->
+      <div class="art-card" data-tags="web">
+        <div class="c-visual">
+          <div class="c-img typ6">
+            <img src="/Image/typ-webperf.png" alt="Typographie et performance web" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag">Web</span>
+            <span class="ctag">Performance</span>
+          </div>
+          <h2 class="c-title">Typographie et performance web : charger vos fontes sans ralentir votre site</h2>
+          <p class="c-exc">WOFF2, subsetting, font-display : les techniques indispensables pour conjuguer beauté et vitesse.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Théo Blanc</strong></div>
+            <span class="c-rt">6 min</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sb-sec">
+        <p class="sb-title">Tendances</p>
+        <div class="trend-list">
+          <div class="trend-item">
+            <div class="t-num">01</div>
+            <div><p class="t-title">Variable fonts : l'explosion de 2026</p><p class="t-meta">Variable · 6.2K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">02</div>
+            <div><p class="t-title">Les meilleures fontes gratuites</p><p class="t-meta">Ressources · 5.4K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">03</div>
+            <div><p class="t-title">L'histoire de l'Helvetica</p><p class="t-meta">Histoire · 4.1K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">04</div>
+            <div><p class="t-title">Serif ou sans-serif en 2026 ?</p><p class="t-meta">Tendances · 3.3K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">05</div>
+            <div><p class="t-title">Typographie émotionnelle</p><p class="t-meta">Expression · 2.8K lectures</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spécimen du mois -->
+      <div class="sb-sec">
+        <p class="sb-title">Spécimen du mois</p>
+        <div class="specimen-card">
+          <div class="sp-header">
+            <div class="sp-display">Rg</div>
+          </div>
+          <div class="sp-body">
+            <p class="sp-name">Garamond Premier Pro</p>
+            <p class="sp-foundry">Adobe Originals — Serif</p>
+            <p class="sp-desc">Une interprétation moderne du caractère du XVIe siècle, parfaite pour l'éditorial long format.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nl-side">
+        <p class="nl-tag">Newsletter</p>
+        <h3 class="nl-title">FORMA Weekly</h3>
+        <p class="nl-sub">Chaque lundi, les 5 articles qui ont marqué la semaine dans le monde du design.</p>
+        <div class="nl-form">
+          <input class="nl-inp" type="email" placeholder="votre@email.com">
+          <button class="nl-btn">S'abonner</button>
+        </div>
+      </div>
+
+      <div class="sb-sec">
+        <p class="sb-title">Explorer</p>
+        <div class="tags-cloud">
+          <span class="tag-pill">Serif</span>
+          <span class="tag-pill">Grotesk</span>
+          <span class="tag-pill">Bauhaus</span>
+          <span class="tag-pill">Variable</span>
+          <span class="tag-pill">Lettering</span>
+          <span class="tag-pill">Web fonts</span>
+          <span class="tag-pill">Calligraphie</span>
+          <span class="tag-pill">Display</span>
+          <span class="tag-pill">Monospace</span>
+          <span class="tag-pill">OpenType</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- DOSSIER DU MOIS -->
+  <section class="full-feat">
+    <img src="/Image/typ-dossier-opensourc.png" alt="Open source typographie" class="ff-bg-img">
+    <div class="ff-overlay"></div>
+    <div class="ff-inner">
+      <div>
+        <p class="ff-tag">Dossier du mois</p>
+        <h2 class="ff-title">Fontes libres :<br>l'<em>open source</em><br>change tout</h2>
+        <p class="ff-text">
+          Google Fonts, Velvetyne, Open Foundry — le mouvement des fontes libres transforme l'accès
+          à la typographie de qualité. Qui crée, qui donne, et pourquoi ? Enquête sur une communauté
+          qui repense le modèle économique du caractère.
+        </p>
+        <a href="#" class="ff-link">Lire le dossier complet →</a>
+      </div>
+      <div class="ff-right">
+        <div class="ff-stat">
+          <div class="ff-num">1500+</div>
+          <div class="ff-label">familles disponibles sur Google Fonts</div>
+        </div>
+        <div class="ff-stat">
+          <div class="ff-num">94%</div>
+          <div class="ff-label">des sites web utilisent au moins une fonte libre</div>
+        </div>
+        <div class="ff-stat">
+          <div class="ff-num">×3</div>
+          <div class="ff-label">croissance des contributions open source en 5 ans</div>
+        </div>
+        <div class="ff-stat">
+          <div class="ff-num">2026</div>
+          <div class="ff-label">l'année où le libre dépasse le propriétaire</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="fl">
+      <p class="logo">FOR<span>M</span>A</p>
+      <p>Le magazine de référence du design, de l'architecture et des arts visuels depuis 2010.</p>
+    </div>
+    <div class="fcols">
+      <div class="fcol">
+        <h4>Rubriques</h4>
+        <ul>
+          <li><a href="../Architecture/index.html">Architecture</a></li>
+          <li><a href="../Interieur/index.html">Intérieur</a></li>
+          <li><a href="index.html">Typographie</a></li>
+          <li><a href="../Photographie/index.html">Photographie</a></li>
+          <li><a href="../Marques/index.html">Marques</a></li>
+          <li><a href="../Art/index.html">Art</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Magazine</h4>
+        <ul>
+          <li><a href="#">Abonnement</a></li>
+          <li><a href="#">Archives</a></li>
+          <li><a href="#">Équipe</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Confidentialité</a></li>
+          <li><a href="#">CGU</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="fbar">
+    <p>© 2026 FORMA Magazine — Tous droits réservés</p>
+    <p><a href="../index.html" style="color:inherit;text-decoration:none;">← Accueil</a></p>
+  </div>
+
+  <script src="../shared.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

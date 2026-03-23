@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marques</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+
+  <!-- BARRE DE PROGRESSION -->
+  <div class="rpbar" id="progress"></div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-logo">FOR<span>M</span>A</div>
+    <div class="nav-cats">
+      <a href="../Architecture/index.html">Architecture</a>
+      <a href="../Interieur/index.html">Intérieur</a>
+      <a href="../Typographie/index.html">Typographie</a>
+      <a href="../Photographie/index.html">Photographie</a>
+      <a href="index.html" class="active">Marques</a>
+      <a href="../Art/index.html">Art</a>
+    </div>
+    <div class="nav-right">
+      <button class="btn-theme" id="themeToggle" title="Changer de thème">
+        <span class="btn-theme-icon">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="1" x2="8" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="13" x2="8" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="1" y1="8" x2="3" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="8" x2="15" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="2.93" y1="2.93" x2="4.34" y2="4.34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="11.66" y1="11.66" x2="13.07" y2="13.07" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="2.93" y1="13.07" x2="4.34" y2="11.66" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="11.66" y1="4.34" x2="13.07" y2="2.93" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 10.5A6 6 0 0 1 5.5 2.5a6 6 0 1 0 8 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </span>
+      </button>
+      <button class="btn-sub">S'abonner</button>
+    </div>
+  </nav>
+
+  <!-- EN-TÊTE DE RUBRIQUE -->
+  <div class="section-header">
+    <div class="sh-left">
+      <span class="sh-badge">Rubrique</span>
+      <h1 class="sh-title">Marques</h1>
+      <p class="sh-sub">Identités, stratégies, récits — la marque comme œuvre totale.</p>
+    </div>
+    <div class="sh-right">
+      <div class="sh-stat"><span class="sh-n">211</span><span class="sh-l">articles</span></div>
+      <div class="sh-stat"><span class="sh-n">34</span><span class="sh-l">analyses</span></div>
+      <div class="sh-stat"><span class="sh-n">72K</span><span class="sh-l">lecteurs</span></div>
+    </div>
+  </div>
+
+  <!-- ARTICLE À LA UNE -->
+  <section class="featured">
+    <div class="feat-visual">
+      <div class="feat-art">
+        <img src="../Image/mk-une.png" alt="Identité de marque vivante" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+      </div>
+      <div class="feat-label">À la Une</div>
+      <div class="feat-num">01</div>
+    </div>
+    <div class="feat-content">
+      <div class="feat-meta">
+        <span class="cat-tag">Marques</span>
+        <span class="msep">·</span>
+        <span class="mdate">6 mars 2026</span>
+        <span class="msep">·</span>
+        <span class="mdate">16 min</span>
+      </div>
+      <h1 class="feat-title">Le logo est<br><em>mort</em>, vive<br>l'identité vivante</h1>
+      <p class="feat-excerpt">
+        Dans un monde de surfaces tactiles, d'interfaces animées et de réseaux sociaux,
+        le logo statique cède la place à des systèmes d'identité dynamiques, adaptatifs,
+        presque vivants. Une révolution silencieuse qui redéfinit ce que « marque » signifie.
+      </p>
+      <div class="feat-author">
+        <div class="avatar">AM</div>
+        <div>
+          <p class="a-name">Alex Morin</p>
+          <p class="a-role">Rédacteur Marques & Identités</p>
+        </div>
+      </div>
+      <a href="#" class="read-link">Lire l'article →</a>
+    </div>
+  </section>
+
+  <!-- FILTRE THÈMES -->
+  <div class="filter-bar">
+    <span class="fb-label">Thèmes</span>
+    <div class="fb-tags">
+      <button class="fb-btn active">Tout voir</button>
+      <button class="fb-btn">Identité visuelle</button>
+      <button class="fb-btn">Rebranding</button>
+      <button class="fb-btn">Logo</button>
+      <button class="fb-btn">Luxe</button>
+      <button class="fb-btn">Stratégie</button>
+      <button class="fb-btn">Packaging</button>
+    </div>
+  </div>
+
+  <!-- GRILLE PRINCIPALE + SIDEBAR -->
+  <div class="content-grid">
+    <div class="main-feed">
+      <div class="feed-label">
+        <h3>Articles récents</h3>
+        <div class="fl-line"></div>
+      </div>
+
+      <!-- Article large -->
+      <div class="art-card lg" data-tags="rebranding">
+        <div class="c-visual">
+          <div class="c-img mk1" style="height:260px;">
+            <img src="../Image/mk-rebranding.png" alt="Refontes de marque 2025" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag hl">Dossier 2026</span>
+            <span class="ctag">Rebranding</span>
+          </div>
+          <h2 class="c-title">Les 10 refontes de marque qui ont marqué l'année : entre courage et catastrophe</h2>
+          <p class="c-exc">Jaguar, Burberry, Tropicana, Air France — certains rebranding ont propulsé des entreprises vers l'avenir, d'autres ont provoqué des crises en quelques heures. Analyse critique des grandes transformations visuelles de 2025.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Alex Morin</strong></div>
+            <span class="c-rt">14 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 1 -->
+      <div class="art-card" data-tags="luxe">
+        <div class="c-visual">
+          <div class="c-img mk2">
+            <img src="../Image/mk-luxe.png" alt="Luxe silencieux Loro Piana" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags"><span class="ctag">Luxe</span></div>
+          <h2 class="c-title">Comment Loro Piana est devenue la marque la plus discrète et la plus désirée du luxe mondial</h2>
+          <p class="c-exc">Pas de logo sur les vêtements, pas de campagnes publicitaires. Le luxe silencieux comme stratégie radicale de différenciation.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Sophie Beaumont</strong></div>
+            <span class="c-rt">10 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="art-card" data-tags="identite-visuelle">
+        <div class="c-visual">
+          <div class="c-img mk3">
+            <img src="../Image/mk-apple.png" alt="Apple identité visuelle" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag">Identité visuelle</span>
+            <span class="ctag">Tech</span>
+          </div>
+          <h2 class="c-title">Apple sans Jony Ive : comment l'identité visuelle a-t-elle évolué depuis 2019 ?</h2>
+          <p class="c-exc">Cinq ans après le départ du directeur du design, le regard d'un expert sur les transformations subtiles mais profondes du langage visuel Apple.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Yuna Kim</strong></div>
+            <span class="c-rt">11 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 3 -->
+      <div class="art-card" data-tags="strategie">
+        <div class="c-visual">
+          <div class="c-img mk4">
+            <img src="../Image/mk-pentagram.png" alt="Studio Pentagram design" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag">Stratégie</span>
+            <span class="ctag">Interview</span>
+          </div>
+          <h2 class="c-title">Pentagram : dans les coulisses du cabinet qui a redessiné la moitié des grandes marques mondiales</h2>
+          <p class="c-exc">Un entretien rare avec une partenaire du studio légendaire sur la méthode, la clientèle et l'avenir du design d'identité.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Clara Laurent</strong></div>
+            <span class="c-rt">13 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 4 -->
+      <div class="art-card" data-tags="logo">
+        <div class="c-visual">
+          <div class="c-img mk5">
+            <img src="../Image/mk-logo-ab.png" alt="A/B testing logo" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags"><span class="ctag">Logo</span><span class="ctag">Analyse</span></div>
+          <h2 class="c-title">A/B testing le logo : quand les données remplacent l'instinct du designer</h2>
+          <p class="c-exc">Netflix, Spotify, Airbnb — les géants du numérique testent leurs logos auprès de millions d'utilisateurs avant de les valider. Le design par les données, bénédiction ou malédiction ?</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Thomas Girard</strong></div>
+            <span class="c-rt">8 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 5 -->
+      <div class="art-card" data-tags="packaging">
+        <div class="c-visual">
+          <div class="c-img mk6">
+            <img src="../Image/mk-packaging.png" alt="Packaging sans plastique" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag">Packaging</span>
+            <span class="ctag">Durable</span>
+          </div>
+          <h2 class="c-title">Packaging sans plastique : les marques qui ont transformé leur contrainte écologique en avantage esthétique</h2>
+          <p class="c-exc">Papier kraft, verre, aluminium recyclé — les nouvelles règles du conditionnement deviennent un territoire créatif inédit pour les designers.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Hana Mori</strong></div>
+            <span class="c-rt">9 min</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sb-sec">
+        <p class="sb-title">Tendances</p>
+        <div class="trend-list">
+          <div class="trend-item">
+            <div class="t-num">01</div>
+            <div><p class="t-title">Le rebranding Jaguar décrypté</p><p class="t-meta">Rebranding · 9.2K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">02</div>
+            <div><p class="t-title">Identités dynamiques : le futur</p><p class="t-meta">Identité · 7.4K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">03</div>
+            <div><p class="t-title">Luxe discret vs logomania</p><p class="t-meta">Luxe · 6.1K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">04</div>
+            <div><p class="t-title">La couleur comme signature</p><p class="t-meta">Couleur · 4.8K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">05</div>
+            <div><p class="t-title">Typographie de marque en 2026</p><p class="t-meta">Typographie · 3.9K lectures</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Refonte du mois -->
+      <div class="sb-sec">
+        <p class="sb-title">Refonte du mois</p>
+        <div class="rebrand-card">
+          <div class="rb-before-after">
+            <div class="rb-before">
+              <span class="rb-lbl">Avant</span>
+              <div class="rb-visual rv-before">
+                <svg width="44" height="20" viewBox="0 0 44 20" fill="none">
+                  <rect x="1" y="1" width="42" height="18" rx="2" stroke="rgba(255,255,255,.3)" stroke-width="1" fill="none"/>
+                  <text x="22" y="14" fill="rgba(255,255,255,.4)" font-size="9" font-weight="bold" text-anchor="middle">BRAND</text>
+                </svg>
+              </div>
+            </div>
+            <div class="rb-arrow">→</div>
+            <div class="rb-after">
+              <span class="rb-lbl">Après</span>
+              <div class="rb-visual rv-after">
+                <svg width="44" height="20" viewBox="0 0 44 20" fill="none">
+                  <circle cx="10" cy="10" r="7" fill="rgba(255,69,0,.7)"/>
+                  <text x="30" y="14" fill="rgba(255,255,255,.8)" font-size="9" font-weight="bold" text-anchor="middle">br</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="rb-body">
+            <p class="rb-name">Burberry</p>
+            <p class="rb-tag">Mode · Rebranding 2025</p>
+            <p class="rb-desc">Retour aux initiales, typographie sur mesure, abandon du chevalier. Un rebranding qui divise encore.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nl-side">
+        <p class="nl-tag">Newsletter</p>
+        <h3 class="nl-title">FORMA Weekly</h3>
+        <p class="nl-sub">Chaque lundi, les 5 articles qui ont marqué la semaine dans le monde du design.</p>
+        <div class="nl-form">
+          <input class="nl-inp" type="email" placeholder="votre@email.com">
+          <button class="nl-btn">S'abonner</button>
+        </div>
+      </div>
+
+      <div class="sb-sec">
+        <p class="sb-title">Explorer</p>
+        <div class="tags-cloud">
+          <span class="tag-pill">Logo</span>
+          <span class="tag-pill">Rebranding</span>
+          <span class="tag-pill">Luxe</span>
+          <span class="tag-pill">Couleur</span>
+          <span class="tag-pill">Typographie</span>
+          <span class="tag-pill">Motion</span>
+          <span class="tag-pill">Packaging</span>
+          <span class="tag-pill">Stratégie</span>
+          <span class="tag-pill">Sonic branding</span>
+          <span class="tag-pill">Retail</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- DOSSIER DU MOIS -->
+  <section class="full-feat">
+    <img src="../Image/mk-dossier.png" alt="Marques sans publicité" class="ff-bg-img">
+    <div class="ff-overlay"></div>
+    <div class="ff-inner">
+      <div>
+        <p class="ff-tag">Dossier du mois</p>
+        <h2 class="ff-title">Marques sans<br><em>publicité</em> :<br>le nouveau pouvoir</h2>
+        <p class="ff-text">
+          Loewe, Loro Piana, Bottega Veneta — une nouvelle génération de marques refusent la publicité traditionnelle
+          et construisent leur désirabilité par le produit seul, le bouche-à-oreille, et une présence culturelle
+          méticuleusement orchestrée. La fin de la réclame comme acte de foi.
+        </p>
+        <a href="#" class="ff-link">Lire le dossier complet →</a>
+      </div>
+      <div class="ff-right">
+        <div class="ff-stat">
+          <div class="ff-num">−62%</div>
+          <div class="ff-label">de budget pub pour les marques de luxe discret depuis 2018</div>
+        </div>
+        <div class="ff-stat">
+          <div class="ff-num">×4</div>
+          <div class="ff-label">croissance de la valeur perçue sans présence médiatique</div>
+        </div>
+        <div class="ff-stat">
+          <div class="ff-num">8/10</div>
+          <div class="ff-label">consommateurs préfèrent découvrir une marque par recommandation</div>
+        </div>
+        <div class="ff-stat">
+          <div class="ff-num">2026</div>
+          <div class="ff-label">l'année où le silence devient la stratégie la plus coûteuse</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="fl">
+      <p class="logo">FOR<span>M</span>A</p>
+      <p>Le magazine de référence du design, de l'architecture et des arts visuels depuis 2010.</p>
+    </div>
+    <div class="fcols">
+      <div class="fcol">
+        <h4>Rubriques</h4>
+        <ul>
+          <li><a href="../Architecture/index.html">Architecture</a></li>
+          <li><a href="../Interieur/index.html">Intérieur</a></li>
+          <li><a href="../Typographie/index.html">Typographie</a></li>
+          <li><a href="../Photographie/index.html">Photographie</a></li>
+          <li><a href="index.html">Marques</a></li>
+          <li><a href="../Art/index.html">Art</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Magazine</h4>
+        <ul>
+          <li><a href="#">Abonnement</a></li>
+          <li><a href="#">Archives</a></li>
+          <li><a href="#">Équipe</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Confidentialité</a></li>
+          <li><a href="#">CGU</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="fbar">
+    <p>© 2026 FORMA Magazine — Tous droits réservés</p>
+    <p><a href="../index.html" style="color:inherit;text-decoration:none;">← Accueil</a></p>
+  </div>
+
+  <script src="../shared.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

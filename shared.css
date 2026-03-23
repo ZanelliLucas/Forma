@@ -1,0 +1,137 @@
+/* ============================================================
+   FORMA Magazine — shared.css
+   Variables de thème + bouton toggle — importé par toutes les pages
+   ============================================================ */
+
+/* ── Thème CLAIR (défaut) ── */
+:root,
+[data-theme="light"] {
+  --bg:              #F8F8F5;
+  --black:           #0D0D0D;
+  --white:           #F8F8F5;
+  --accent:          #FF4500;
+  --gray:            #888;
+  --light:           #E8E8E3;
+  --mid:             #3D3D3A;
+  --nav-bg:          #F8F8F5;
+  --nav-border:      #E8E8E3;
+  --card-hover:      rgba(0,0,0,0.02);
+  --sb-bg:           #F8F8F5;
+  --footer-bg:       #F8F8F5;
+  --footer-border:   #0D0D0D;
+  --fbar-bg:         #0D0D0D;
+  --toggle-bg:       #E8E8E3;
+  --toggle-color:    #0D0D0D;
+  --toggle-hover-bg: #0D0D0D;
+  --toggle-hover-fg: #F8F8F5;
+}
+
+/* ── Thème SOMBRE ── */
+[data-theme="dark"] {
+  --bg:              #0D0D0D;
+  --black:           #F0EDE6;
+  --white:           #0D0D0D;
+  --accent:          #FF4500;
+  --gray:            #666;
+  --light:           #2A2A2A;
+  --mid:             #999;
+  --nav-bg:          #0D0D0D;
+  --nav-border:      #1E1E1E;
+  --card-hover:      rgba(255,255,255,0.03);
+  --sb-bg:           #0D0D0D;
+  --footer-bg:       #0A0A0A;
+  --footer-border:   #2A2A2A;
+  --fbar-bg:         #050505;
+  --toggle-bg:       #1E1E1E;
+  --toggle-color:    #F0EDE6;
+  --toggle-hover-bg: #F0EDE6;
+  --toggle-hover-fg: #0D0D0D;
+}
+
+/* ── Bouton toggle ── */
+.btn-theme {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--toggle-bg);
+  border: 1px solid var(--nav-border);
+  color: var(--toggle-color);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.3s;
+  flex-shrink: 0;
+}
+.btn-theme:hover {
+  background: var(--toggle-hover-bg);
+  color: var(--toggle-hover-fg);
+}
+.btn-theme-icon {
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* Icône active selon thème */
+[data-theme="light"] .icon-moon { display: block; }
+[data-theme="light"] .icon-sun  { display: none; }
+[data-theme="dark"]  .icon-sun  { display: block; }
+[data-theme="dark"]  .icon-moon { display: none; }
+
+/* Transitions globales sur changement de thème */
+body, nav, .section-header, .feat-content, .filter-bar,
+.content-grid, .sidebar, .sb-sec, .full-feat, footer, .fbar,
+.art-card, .c-body, .sp-body, .nl-side {
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ── Menu burger mobile ── */
+.btn-burger {
+  display: none;
+  flex-direction: column; justify-content: center; align-items: center;
+  gap: 5px;
+  width: 36px; height: 36px;
+  background: transparent; border: 1px solid var(--nav-border);
+  cursor: pointer; padding: 8px;
+  transition: border-color 0.2s;
+}
+.btn-burger span {
+  display: block; width: 18px; height: 1.5px;
+  background: var(--black);
+  transition: transform 0.3s, opacity 0.3s;
+}
+.btn-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.btn-burger.open span:nth-child(2) { opacity: 0; }
+.btn-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.nav-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 98;
+  background: rgba(0,0,0,0.5);
+}
+.nav-overlay.open { display: block; }
+
+.nav-mobile {
+  display: none;
+  position: fixed; top: 60px; left: 0; right: 0; z-index: 99;
+  background: var(--nav-bg);
+  border-bottom: 3px solid var(--accent);
+  flex-direction: column;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.nav-mobile.open {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+}
+.nav-mobile a {
+  padding: 14px 24px;
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 2px; text-transform: uppercase;
+  text-decoration: none; color: var(--gray);
+  border-bottom: 1px solid var(--nav-border);
+  transition: color 0.2s, background 0.2s;
+}
+.nav-mobile a:hover { color: var(--black); background: var(--light); }
+.nav-mobile a.active { color: var(--accent); }
+
+@media (max-width: 768px) {
+  .btn-burger { display: flex; }
+}

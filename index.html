@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORMA — Design, Architecture & Arts Visuels</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+  <!-- BARRE DE PROGRESSION -->
+  <div class="rpbar" id="progress"></div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-logo">FOR<span>M</span>A</div>
+    <div class="nav-cats">
+      <a href="Architecture/index.html">Architecture</a>
+      <a href="Interieur/index.html">Intérieur</a>
+      <a href="Typographie/index.html">Typographie</a>
+      <a href="Photographie/index.html">Photographie</a>
+      <a href="Marques/index.html">Marques</a>
+      <a href="Art/index.html">Art</a>
+    </div>
+    <div class="nav-right">
+      <button class="btn-theme" id="themeToggle" title="Changer de thème">
+        <span class="btn-theme-icon">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="1" x2="8" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="13" x2="8" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="1" y1="8" x2="3" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="8" x2="15" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="2.93" y1="2.93" x2="4.34" y2="4.34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="11.66" y1="11.66" x2="13.07" y2="13.07" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="2.93" y1="13.07" x2="4.34" y2="11.66" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="11.66" y1="4.34" x2="13.07" y2="2.93" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 10.5A6 6 0 0 1 5.5 2.5a6 6 0 1 0 8 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </span>
+      </button>
+      <button class="btn-sub">S'abonner</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <!-- Animation géométrique abstraite -->
+      <div class="hb-shape hb-s1"></div>
+      <div class="hb-shape hb-s2"></div>
+      <div class="hb-shape hb-s3"></div>
+      <div class="hb-grid-lines">
+        <div class="hb-vl hb-vl1"></div>
+        <div class="hb-vl hb-vl2"></div>
+        <div class="hb-vl hb-vl3"></div>
+        <div class="hb-hl hb-hl1"></div>
+        <div class="hb-hl hb-hl2"></div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">N° 48 — Mars 2026</p>
+      <h1 class="hero-title">FOR<span>M</span>A</h1>
+      <p class="hero-sub">Le magazine de référence du design,<br>de l'architecture et des arts visuels.</p>
+      <div class="hero-ctas">
+        <a href="Architecture/index.html" class="hero-btn-primary">Lire le numéro →</a>
+        <a href="#rubriques" class="hero-btn-secondary">Explorer les rubriques</a>
+      </div>
+    </div>
+    <div class="hero-ticker">
+      <div class="ticker-track">
+        <span>Architecture</span><span class="tk-sep">·</span>
+        <span>Intérieur</span><span class="tk-sep">·</span>
+        <span>Typographie</span><span class="tk-sep">·</span>
+        <span>Photographie</span><span class="tk-sep">·</span>
+        <span>Marques</span><span class="tk-sep">·</span>
+        <span>Art</span><span class="tk-sep">·</span>
+        <span>Architecture</span><span class="tk-sep">·</span>
+        <span>Intérieur</span><span class="tk-sep">·</span>
+        <span>Typographie</span><span class="tk-sep">·</span>
+        <span>Photographie</span><span class="tk-sep">·</span>
+        <span>Marques</span><span class="tk-sep">·</span>
+        <span>Art</span><span class="tk-sep">·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUBRIQUES -->
+  <section class="rubriques" id="rubriques">
+    <div class="rub-header">
+      <p class="rub-label">Nos rubriques</p>
+      <div class="rub-line"></div>
+    </div>
+    <div class="rub-grid">
+
+      <a href="Architecture/index.html" class="rub-card">
+        <div class="rub-visual rv-arch">
+          <div class="rub-anim">
+            <div class="ra-circle ra-c1"></div>
+            <div class="ra-circle ra-c2"></div>
+            <div class="ra-square"></div>
+            <div class="ra-dot"></div>
+          </div>
+        </div>
+        <div class="rub-body">
+          <div class="rub-num">01</div>
+          <h2 class="rub-name">Architecture</h2>
+          <p class="rub-desc">Bâtiments, espaces, utopies — la forme comme langage du monde.</p>
+          <span class="rub-link">143 articles →</span>
+        </div>
+      </a>
+
+      <a href="Interieur/index.html" class="rub-card">
+        <div class="rub-visual rv-int">
+          <div class="rub-anim">
+            <div class="ri-floor"></div>
+            <div class="ri-sofa"></div>
+            <div class="ri-lamp"></div>
+            <div class="ri-light"></div>
+          </div>
+        </div>
+        <div class="rub-body">
+          <div class="rub-num">02</div>
+          <h2 class="rub-name">Intérieur</h2>
+          <p class="rub-desc">Espaces, matières, atmosphères — l'art de vivre réinventé.</p>
+          <span class="rub-link">124 articles →</span>
+        </div>
+      </a>
+
+      <a href="Typographie/index.html" class="rub-card">
+        <div class="rub-visual rv-typo">
+          <div class="rub-anim">
+            <div class="rt-letters">Rg</div>
+            <div class="rt-line rt-baseline"></div>
+            <div class="rt-line rt-xheight"></div>
+            <div class="rt-line rt-cap"></div>
+          </div>
+        </div>
+        <div class="rub-body">
+          <div class="rub-num">03</div>
+          <h2 class="rub-name">Typographie</h2>
+          <p class="rub-desc">Caractères, composition, lisibilité — la lettre comme architecture.</p>
+          <span class="rub-link">98 articles →</span>
+        </div>
+      </a>
+
+      <a href="Photographie/index.html" class="rub-card">
+        <div class="rub-visual rv-photo">
+          <div class="rub-anim">
+            <div class="rp-frame">
+              <div class="rp-corner rp-tl"></div>
+              <div class="rp-corner rp-tr"></div>
+              <div class="rp-corner rp-bl"></div>
+              <div class="rp-corner rp-br"></div>
+              <div class="rp-dot"></div>
+            </div>
+          </div>
+        </div>
+        <div class="rub-body">
+          <div class="rub-num">04</div>
+          <h2 class="rub-name">Photographie</h2>
+          <p class="rub-desc">Regard, lumière, instant — l'image comme langage universel.</p>
+          <span class="rub-link">156 articles →</span>
+        </div>
+      </a>
+
+      <a href="Marques/index.html" class="rub-card">
+        <div class="rub-visual rv-mark">
+          <div class="rub-anim">
+            <div class="rm-grid">
+              <div class="rm-gv"></div>
+              <div class="rm-gv"></div>
+              <div class="rm-gh"></div>
+              <div class="rm-gh"></div>
+            </div>
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" style="position:relative;z-index:2">
+              <rect x="5" y="5" width="40" height="40" stroke="rgba(255,255,255,0.5)" stroke-width="1" fill="none"/>
+              <rect x="14" y="14" width="22" height="22" stroke="rgba(255,69,0,0.7)" stroke-width="1" fill="none" transform="rotate(45 25 25)"/>
+              <circle cx="25" cy="25" r="4" fill="rgba(255,255,255,0.5)"/>
+            </svg>
+          </div>
+        </div>
+        <div class="rub-body">
+          <div class="rub-num">05</div>
+          <h2 class="rub-name">Marques</h2>
+          <p class="rub-desc">Identités, stratégies, récits — la marque comme œuvre totale.</p>
+          <span class="rub-link">211 articles →</span>
+        </div>
+      </a>
+
+      <a href="Art/index.html" class="rub-card">
+        <div class="rub-visual rv-art">
+          <div class="rub-anim">
+            <div class="rart-l1"></div>
+            <div class="rart-l2"></div>
+            <div class="rart-spot"></div>
+            <div class="rart-frame"></div>
+          </div>
+        </div>
+        <div class="rub-body">
+          <div class="rub-num">06</div>
+          <h2 class="rub-name">Art</h2>
+          <p class="rub-desc">Œuvres, mouvements, institutions — l'art comme territoire du possible.</p>
+          <span class="rub-link">184 articles →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- À LA UNE — article mis en avant -->
+  <section class="spotlight">
+    <div class="sp-label-wrap">
+      <span class="sp-label">À la une ce mois-ci</span>
+      <div class="sp-line"></div>
+    </div>
+    <div class="sp-grid">
+      <div class="sp-main">
+        <div class="sp-visual sv-main">
+          <div class="sp-cat-badge">Architecture</div>
+          <div class="sp-visual-anim">
+            <div class="sva-c1"></div>
+            <div class="sva-c2"></div>
+            <div class="sva-sq"></div>
+          </div>
+        </div>
+        <div class="sp-body">
+          <div class="sp-meta">
+            <span class="sp-cat">Architecture</span>
+            <span class="sp-sep">·</span>
+            <span class="sp-date">2 mars 2026</span>
+            <span class="sp-sep">·</span>
+            <span class="sp-rt">18 min</span>
+          </div>
+          <h2 class="sp-title">Le Brutalisme en 2026 — renaissance ou simple nostalgie du béton ?</h2>
+          <p class="sp-exc">Comment les architectes réinterprètent le béton brut dans un monde post-digital. Entre réhabilitation patrimoniale et nouveau brutalisme numérique, une génération renoue avec la matière.</p>
+          <a href="Architecture/index.html" class="sp-read">Lire l'article →</a>
+        </div>
+      </div>
+      <div class="sp-side">
+        <div class="sp-side-card">
+          <div class="sp-s-visual sv-s1"></div>
+          <div class="sp-s-body">
+            <span class="sp-s-cat">Typographie</span>
+            <p class="sp-s-title">Variable fonts : la typographie enfin vivante</p>
+            <span class="sp-s-rt">9 min</span>
+          </div>
+        </div>
+        <div class="sp-side-card">
+          <div class="sp-s-visual sv-s2"></div>
+          <div class="sp-s-body">
+            <span class="sp-s-cat">Art</span>
+            <p class="sp-s-title">La peinture après l'IA : résistance ou dialogue ?</p>
+            <span class="sp-s-rt">18 min</span>
+          </div>
+        </div>
+        <div class="sp-side-card">
+          <div class="sp-s-visual sv-s3"></div>
+          <div class="sp-s-body">
+            <span class="sp-s-cat">Marques</span>
+            <p class="sp-s-title">Le logo est mort, vive l'identité vivante</p>
+            <span class="sp-s-rt">16 min</span>
+          </div>
+        </div>
+        <div class="sp-side-card">
+          <div class="sp-s-visual sv-s4"></div>
+          <div class="sp-s-body">
+            <span class="sp-s-cat">Photographie</span>
+            <p class="sp-s-title">L'œil et la machine : IA et argentique</p>
+            <span class="sp-s-rt">14 min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHIFFRES CLÉS -->
+  <section class="stats-band">
+    <div class="stat-item">
+      <div class="stat-n">718</div>
+      <div class="stat-l">Articles publiés</div>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+      <div class="stat-n">6</div>
+      <div class="stat-l">Rubriques</div>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+      <div class="stat-n">329K</div>
+      <div class="stat-l">Lecteurs mensuels</div>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+      <div class="stat-n">48</div>
+      <div class="stat-l">Numéros parus</div>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+      <div class="stat-n">16</div>
+      <div class="stat-l">Années d'existence</div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="nl-section">
+    <div class="nl-left">
+      <p class="nl-eyebrow">Newsletter</p>
+      <h2 class="nl-title">FORMA Weekly</h2>
+      <p class="nl-text">Chaque lundi matin, les 5 articles qui ont marqué la semaine dans le monde du design, de l'architecture et des arts visuels. 47 000 lecteurs déjà abonnés.</p>
+    </div>
+    <div class="nl-right">
+      <div class="nl-form">
+        <input class="nl-inp" type="email" placeholder="votre@email.com">
+        <button class="nl-btn">S'abonner →</button>
+      </div>
+      <p class="nl-mention">Pas de spam. Désinscription en un clic. Vos données ne sont jamais partagées.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="fl">
+      <p class="logo">FOR<span>M</span>A</p>
+      <p>Le magazine de référence du design, de l'architecture et des arts visuels depuis 2010.</p>
+    </div>
+    <div class="fcols">
+      <div class="fcol">
+        <h4>Rubriques</h4>
+        <ul>
+          <li><a href="Architecture/index.html">Architecture</a></li>
+          <li><a href="Interieur/index.html">Intérieur</a></li>
+          <li><a href="Typographie/index.html">Typographie</a></li>
+          <li><a href="Photographie/index.html">Photographie</a></li>
+          <li><a href="Marques/index.html">Marques</a></li>
+          <li><a href="Art/index.html">Art</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Magazine</h4>
+        <ul>
+          <li><a href="#">Abonnement</a></li>
+          <li><a href="#">Archives</a></li>
+          <li><a href="#">Équipe</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Confidentialité</a></li>
+          <li><a href="#">CGU</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="fbar">
+    <p>© 2026 FORMA Magazine — Tous droits réservés</p>
+    <p>Design & développement : Studio FORMA</p>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>

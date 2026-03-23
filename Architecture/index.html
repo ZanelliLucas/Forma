@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+
+  <div class="rpbar" id="progress"></div>
+
+  <nav>
+    <div class="nav-logo">FOR<span>M</span>A</div>
+    <div class="nav-cats">
+      <a href="index.html" class="active">Architecture</a>
+      <a href="../Interieur/index.html">Intérieur</a>
+      <a href="../Typographie/index.html">Typographie</a>
+      <a href="../Photographie/index.html">Photographie</a>
+      <a href="../Marques/index.html">Marques</a>
+      <a href="../Art/index.html">Art</a>
+    </div>
+    <div class="nav-right">
+      <button class="btn-theme" id="themeToggle" title="Changer de thème">
+        <span class="btn-theme-icon">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="1" x2="8" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="13" x2="8" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="1" y1="8" x2="3" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="8" x2="15" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="2.93" y1="2.93" x2="4.34" y2="4.34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="11.66" y1="11.66" x2="13.07" y2="13.07" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="2.93" y1="13.07" x2="4.34" y2="11.66" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="11.66" y1="4.34" x2="13.07" y2="2.93" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 10.5A6 6 0 0 1 5.5 2.5a6 6 0 1 0 8 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </span>
+      </button>
+      <button class="btn-sub" id="btnAbonner">S'abonner</button>
+    </div>
+  </nav>
+
+  <div class="section-header">
+    <div class="sh-left">
+      <span class="sh-badge">Rubrique</span>
+      <h1 class="sh-title">Architecture</h1>
+      <p class="sh-sub">Bâtiments, espaces, utopies — la forme comme langage du monde.</p>
+    </div>
+    <div class="sh-right">
+      <div class="sh-stat"><span class="sh-n">143</span><span class="sh-l">articles</span></div>
+      <div class="sh-stat"><span class="sh-n">26</span><span class="sh-l">dossiers</span></div>
+      <div class="sh-stat"><span class="sh-n">58K</span><span class="sh-l">lecteurs</span></div>
+    </div>
+  </div>
+
+  <div class="hero-issue">
+    <span class="issue-badge">Numéro 48</span>
+    <p class="issue-text">
+      <strong>Dossier spécial :</strong> Le Brutalisme en 2026 — renaissance ou nostalgie ?
+      Comment les architectes réinterprètent le béton brut dans un monde post-digital.
+    </p>
+  </div>
+
+  <section class="featured">
+    <div class="feat-visual feat-visual--img" style="background-image: url('../Image/img-une-brutalisme.png');">
+      <div class="feat-visual-overlay"></div>
+      <div class="feat-label">À la Une</div>
+      <div class="feat-num">01</div>
+    </div>
+    <div class="feat-content">
+      <div class="feat-meta">
+        <span class="cat-tag">Architecture</span>
+        <span class="msep">·</span>
+        <span class="mdate">1 mars 2026</span>
+        <span class="msep">·</span>
+        <span class="mdate">12 min</span>
+      </div>
+      <h1 class="feat-title">Le Brutalisme<br>retrouve <em>son âme</em><br>dans le digital</h1>
+      <p class="feat-excerpt">Une nouvelle génération d'architectes plonge dans l'esthétique du béton brut pour repenser nos espaces numériques. Entre nostalgie formelle et vrai renouveau, où en sommes-nous vraiment ?</p>
+      <div class="feat-author">
+        <div class="avatar">SB</div>
+        <div>
+          <p class="a-name">Sophie Beaumont</p>
+          <p class="a-role">Rédactrice Architecture</p>
+        </div>
+      </div>
+      <button class="read-link" data-title="Le Brutalisme retrouve son âme dans le digital" data-rt="12">Lire l'article →</button>
+    </div>
+  </section>
+
+  <div class="filter-bar">
+    <span class="fb-label">Thèmes</span>
+    <div class="fb-tags">
+      <button class="fb-btn active" data-filter="all">Tout voir</button>
+      <button class="fb-btn" data-filter="Brutalisme">Brutalisme</button>
+      <button class="fb-btn" data-filter="Minimalisme">Minimalisme</button>
+      <button class="fb-btn" data-filter="Contemporain">Contemporain</button>
+      <button class="fb-btn" data-filter="Patrimoine">Patrimoine</button>
+      <button class="fb-btn" data-filter="Urbain">Urbain</button>
+      <button class="fb-btn" data-filter="Durable">Durable</button>
+    </div>
+  </div>
+
+  <div class="content-grid">
+    <div class="main-feed">
+      <div class="feed-label">
+        <h3>Articles récents</h3>
+        <div class="fl-line"></div>
+      </div>
+
+      <div class="art-card lg" data-tags="Brutalisme Contemporain">
+        <div class="c-visual">
+          <div class="c-img c-img--photo" style="height:240px; background-image: url('../Image/img-brutalisme.png');">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags"><span class="ctag hl">Dossier 2026</span><span class="ctag">Brutalisme</span></div>
+          <h2 class="c-title">Le béton brut revient : 12 projets brutalistes qui redéfinissent nos villes en 2026</h2>
+          <p class="c-exc">De Tokyo à Marseille, une nouvelle génération d'architectes réhabilite le vocabulaire brutaliste avec une conscience écologique et sociale inédite.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Sophie Beaumont</strong></div>
+            <span class="c-rt">14 min</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="art-card" data-tags="Durable Contemporain">
+        <div class="c-visual">
+          <div class="c-img c-img--photo" style="background-image: url('../Image/img-materiaux.png');">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags"><span class="ctag">Durable</span></div>
+          <h2 class="c-title">Bois massif, terre crue, paille : les matériaux du futur prennent de la hauteur</h2>
+          <p class="c-exc">Des immeubles de 18 étages en bois, des murs en pisé dans les métropoles — l'architecture bio-sourcée quitte les projets expérimentaux.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Kaito Nakamura</strong></div>
+            <span class="c-rt">10 min</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="art-card" data-tags="Patrimoine">
+        <div class="c-visual">
+          <div class="c-img c-img--photo" style="background-image: url('../Image/img-patrimoine.png');">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags"><span class="ctag">Patrimoine</span><span class="ctag">Interview</span></div>
+          <h2 class="c-title">Rénover sans trahir : l'art difficile de toucher aux monuments historiques</h2>
+          <p class="c-exc">Trois architectes lauréats du Grand Prix racontent leurs compromis, leurs échecs et leurs victoires face aux contraintes du patrimoine classé.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Marc Delacroix</strong></div>
+            <span class="c-rt">11 min</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="art-card" data-tags="Urbain Contemporain">
+        <div class="c-visual">
+          <div class="c-img c-img--photo" style="background-image: url('../Image/img-ville-quart-heure.png');">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags"><span class="ctag">Urbain</span></div>
+          <h2 class="c-title">La ville du quart d'heure : Paris, Barcelone, Melbourne — qui y est vraiment arrivé ?</h2>
+          <p class="c-exc">Cinq ans après le buzz conceptuel, un bilan honnête des villes qui ont transformé l'idée en réalité urbaine vécue.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Emma Torres</strong></div>
+            <span class="c-rt">9 min</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="art-card" data-tags="Minimalisme Contemporain">
+        <div class="c-visual">
+          <div class="c-img c-img--photo" style="background-image: url('../Image/img-brutalisme.png'); background-position: center 40%;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags"><span class="ctag">Minimalisme</span></div>
+          <h2 class="c-title">Tadao Ando à 83 ans : la lumière, le béton, le silence — et rien d'autre</h2>
+          <p class="c-exc">Le maître japonais revient sur six décennies d'architecture minimaliste et partage sa vision d'un monde bâti qui respire.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Yuna Kim</strong></div>
+            <span class="c-rt">13 min</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="art-card" data-tags="Durable Urbain">
+        <div class="c-visual">
+          <div class="c-img c-img--photo" style="background-image: url('../Image/img-forets-verticales.png');">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags"><span class="ctag">Durable</span><span class="ctag">Urbain</span></div>
+          <h2 class="c-title">Toits végétalisés, murs vivants, forêts verticales : le bâtiment comme écosystème</h2>
+          <p class="c-exc">Quand l'architecture intègre la biodiversité non plus comme décoration mais comme structure porteuse d'un nouveau rapport à la nature en ville.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Alex Morin</strong></div>
+            <span class="c-rt">8 min</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="no-results" id="noResults" style="display:none;">
+        <p>Aucun article pour ce thème pour l'instant.</p>
+      </div>
+
+    </div>
+
+    <aside class="sidebar">
+      <div class="sb-sec">
+        <p class="sb-title">Tendances</p>
+        <div class="trend-list">
+          <div class="trend-item" data-title="Le retour du design brutaliste" data-rt="7">
+            <div class="t-num">01</div>
+            <div><p class="t-title">Le retour du design brutaliste</p><p class="t-meta">Architecture · 4.2K lectures</p></div>
+          </div>
+          <div class="trend-item" data-title="Couleurs Pantone 2026 dévoilées" data-rt="5">
+            <div class="t-num">02</div>
+            <div><p class="t-title">Couleurs Pantone 2026 dévoilées</p><p class="t-meta">Tendances · 3.8K lectures</p></div>
+          </div>
+          <div class="trend-item" data-title="Zaha Hadid, 10 ans après" data-rt="9">
+            <div class="t-num">03</div>
+            <div><p class="t-title">Zaha Hadid, 10 ans après</p><p class="t-meta">Architecture · 3.1K lectures</p></div>
+          </div>
+          <div class="trend-item" data-title="La ville du quart d'heure" data-rt="9">
+            <div class="t-num">04</div>
+            <div><p class="t-title">La ville du quart d'heure</p><p class="t-meta">Urbain · 2.7K lectures</p></div>
+          </div>
+          <div class="trend-item" data-title="Architecture durable 2026" data-rt="8">
+            <div class="t-num">05</div>
+            <div><p class="t-title">Architecture durable 2026</p><p class="t-meta">Durable · 2.2K lectures</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nl-side">
+        <p class="nl-tag">Newsletter</p>
+        <h3 class="nl-title">FORMA Weekly</h3>
+        <p class="nl-sub">Chaque lundi, les 5 articles qui ont marqué la semaine dans le monde du design.</p>
+        <div class="nl-form" id="nlForm">
+          <input class="nl-inp" type="email" id="nlEmail" placeholder="votre@email.com">
+          <button class="nl-btn" id="nlSubmit">S'abonner</button>
+        </div>
+        <p class="nl-confirm" id="nlConfirm" style="display:none;">✓ Vous êtes inscrit·e !</p>
+      </div>
+
+      <div class="sb-sec">
+        <p class="sb-title">Explorer</p>
+        <div class="tags-cloud">
+          <span class="tag-pill" data-filter="Brutalisme">Brutalisme</span>
+          <span class="tag-pill" data-filter="Minimalisme">Minimalisme</span>
+          <span class="tag-pill" data-filter="Patrimoine">Patrimoine</span>
+          <span class="tag-pill" data-filter="Urbain">Urbain</span>
+          <span class="tag-pill" data-filter="Durable">Durable</span>
+          <span class="tag-pill" data-filter="Contemporain">Contemporain</span>
+          <span class="tag-pill" data-filter="all">Tout voir</span>
+          <span class="tag-pill no-filter">Bauhaus</span>
+          <span class="tag-pill no-filter">Biomimétisme</span>
+          <span class="tag-pill no-filter">Art déco</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="full-feat" style="background-image: url('../Image/img-dossier-durable.png');">
+    <div class="full-feat-overlay"></div>
+    <div class="full-feat-content">
+      <p class="ff-tag">Dossier du mois</p>
+      <h2 class="ff-title">Design durable :<br>l'<em>éco-conception</em><br>change tout</h2>
+      <p class="ff-text">En 2026, la durabilité n'est plus une option mais une condition de survie pour les studios de design. Matériaux régénératifs, design pour le démontage — une révolution silencieuse mais radicale est en marche.</p>
+      <button class="ff-link" data-title="Design durable : l'éco-conception change tout" data-rt="16">Lire le dossier complet →</button>
+    </div>
+    <div class="ff-right">
+      <div class="ff-stat"><div class="ff-num">78%</div><div class="ff-label">des studios intègrent des critères écologiques</div></div>
+      <div class="ff-stat"><div class="ff-num">42</div><div class="ff-label">studios pionniers du design régénératif</div></div>
+      <div class="ff-stat"><div class="ff-num">2030</div><div class="ff-label">objectif carbone neutre pour le secteur</div></div>
+      <div class="ff-stat"><div class="ff-num">3×</div><div class="ff-label">plus de demandes pour le design durable</div></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fl">
+      <p class="logo">FOR<span>M</span>A</p>
+      <p>Le magazine de référence du design, de l'architecture et des arts visuels depuis 2010.</p>
+    </div>
+    <div class="fcols">
+      <div class="fcol">
+        <h4>Rubriques</h4>
+        <ul>
+          <li><a href="index.html">Architecture</a></li>
+          <li><a href="../Interieur/index.html">Intérieur</a></li>
+          <li><a href="../Typographie/index.html">Typographie</a></li>
+          <li><a href="../Photographie/index.html">Photographie</a></li>
+          <li><a href="../Marques/index.html">Marques</a></li>
+          <li><a href="../Art/index.html">Art</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Magazine</h4>
+        <ul>
+          <li><a href="#" class="footer-link" data-modal="abonnement">Abonnement</a></li>
+          <li><a href="#" class="footer-link" data-modal="archives">Archives</a></li>
+          <li><a href="#" class="footer-link" data-modal="equipe">Équipe</a></li>
+          <li><a href="#" class="footer-link" data-modal="contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="#" class="footer-link" data-modal="mentions">Mentions légales</a></li>
+          <li><a href="#" class="footer-link" data-modal="confidentialite">Confidentialité</a></li>
+          <li><a href="#" class="footer-link" data-modal="cgu">CGU</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="fbar">
+    <p>© 2026 FORMA Magazine — Tous droits réservés</p>
+    <p><a href="../index.html" style="color:inherit;text-decoration:none;">← Accueil</a></p>
+  </div>
+
+  <!-- ═══ MODAL ARTICLE ═══ -->
+  <div class="modal-overlay" id="articleOverlay">
+    <div class="modal-box" id="articleBox">
+      <button class="modal-close" data-close="article">✕</button>
+      <div class="modal-inner">
+        <p class="modal-eyebrow">Architecture — FORMA Magazine</p>
+        <h2 class="modal-title" id="articleTitle">Titre</h2>
+        <div class="modal-meta">
+          <span>Mars 2026</span>
+          <span class="modal-sep">·</span>
+          <span id="articleRt">12 min de lecture</span>
+        </div>
+        <div class="modal-body">
+          <p>Vous lisez un aperçu de cet article. Le contenu intégral — avec reportages photographiques, références et analyses détaillées — est réservé aux abonnés FORMA.</p>
+          <p>FORMA est un magazine indépendant fondé en 2010, lu par 58 000 passionnés d'architecture chaque mois.</p>
+        </div>
+        <button class="modal-cta" id="articleSubBtn">Lire l'article complet — S'abonner →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MODAL ABONNEMENT ═══ -->
+  <div class="modal-overlay" id="subOverlay">
+    <div class="modal-box modal-wide" id="subBox">
+      <button class="modal-close" data-close="sub">✕</button>
+      <div class="modal-inner">
+        <p class="modal-eyebrow">Rejoindre FORMA</p>
+        <h2 class="modal-title">Choisissez votre formule</h2>
+        <p class="modal-desc">Accès illimité aux articles, archives depuis 2010, newsletter hebdomadaire.</p>
+        <div class="sub-plans">
+          <div class="sub-plan" id="planMensuel">
+            <p class="plan-name">Mensuel</p>
+            <p class="plan-price">9 <span>€/mois</span></p>
+            <ul>
+              <li>✓ Tous les articles</li>
+              <li>✓ Newsletter</li>
+              <li>✓ Application mobile</li>
+            </ul>
+          </div>
+          <div class="sub-plan sub-plan--featured" id="planAnnuel">
+            <p class="plan-name">Annuel <span class="plan-promo">−30%</span></p>
+            <p class="plan-price">75 <span>€/an</span></p>
+            <ul>
+              <li>✓ Tous les articles</li>
+              <li>✓ Newsletter</li>
+              <li>✓ Application mobile</li>
+              <li>✓ Archives complètes 2010–2026</li>
+              <li>✓ Magazine papier (12 numéros)</li>
+            </ul>
+          </div>
+        </div>
+        <div id="subFormWrap">
+          <input class="modal-input" type="email" id="subEmail" placeholder="votre@email.com">
+          <button class="modal-cta" id="subSubmit">Commencer mon abonnement →</button>
+          <p class="sub-legal">Sans engagement · Résiliation en 1 clic · Paiement sécurisé</p>
+        </div>
+        <p class="sub-ok" id="subOk" style="display:none;">✓ Merci ! Un email de confirmation arrive dans votre boîte.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MODAL INFO (archives, équipe, contact, légal) ═══ -->
+  <div class="modal-overlay" id="infoOverlay">
+    <div class="modal-box" id="infoBox">
+      <button class="modal-close" data-close="info">✕</button>
+      <div class="modal-inner">
+        <p class="modal-eyebrow" id="infoEyebrow">FORMA</p>
+        <h2 class="modal-title" id="infoTitle"></h2>
+        <div class="modal-body" id="infoBody"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../shared.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

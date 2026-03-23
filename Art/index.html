@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+
+  <!-- BARRE DE PROGRESSION -->
+  <div class="rpbar" id="progress"></div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-logo">FOR<span>M</span>A</div>
+    <div class="nav-cats">
+      <a href="../Architecture/index.html">Architecture</a>
+      <a href="../Interieur/index.html">Intérieur</a>
+      <a href="../Typographie/index.html">Typographie</a>
+      <a href="../Photographie/index.html">Photographie</a>
+      <a href="../Marques/index.html">Marques</a>
+      <a href="index.html" class="active">Art</a>
+    </div>
+    <div class="nav-right">
+      <button class="btn-theme" id="themeToggle" title="Changer de thème">
+        <span class="btn-theme-icon">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="1" x2="8" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="13" x2="8" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="1" y1="8" x2="3" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="8" x2="15" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="2.93" y1="2.93" x2="4.34" y2="4.34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="11.66" y1="11.66" x2="13.07" y2="13.07" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="2.93" y1="13.07" x2="4.34" y2="11.66" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="11.66" y1="4.34" x2="13.07" y2="2.93" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 10.5A6 6 0 0 1 5.5 2.5a6 6 0 1 0 8 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </span>
+      </button>
+      <button class="btn-sub">S'abonner</button>
+    </div>
+  </nav>
+
+  <!-- EN-TÊTE DE RUBRIQUE -->
+  <div class="section-header">
+    <div class="sh-left">
+      <span class="sh-badge">Rubrique</span>
+      <h1 class="sh-title">Art</h1>
+      <p class="sh-sub">Œuvres, mouvements, institutions — l'art comme territoire du possible.</p>
+    </div>
+    <div class="sh-right">
+      <div class="sh-stat"><span class="sh-n">184</span><span class="sh-l">articles</span></div>
+      <div class="sh-stat"><span class="sh-n">41</span><span class="sh-l">expositions</span></div>
+      <div class="sh-stat"><span class="sh-n">63K</span><span class="sh-l">lecteurs</span></div>
+    </div>
+  </div>
+
+  <!-- ARTICLE À LA UNE -->
+  <section class="featured">
+    <div class="feat-visual">
+      <div class="feat-art">
+        <img src="../Image/at-une.png" alt="Atelier d'artiste peinture abstraite" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+      </div>
+      <div class="feat-label">À la Une</div>
+      <div class="feat-num">01</div>
+    </div>
+    <div class="feat-content">
+      <div class="feat-meta">
+        <span class="cat-tag">Art</span>
+        <span class="msep">·</span>
+        <span class="mdate">7 mars 2026</span>
+        <span class="msep">·</span>
+        <span class="mdate">18 min</span>
+      </div>
+      <h1 class="feat-title">La peinture<br>après l'<em>IA</em> :<br>résistance ou dialogue ?</h1>
+      <p class="feat-excerpt">
+        À l'heure où les algorithmes génèrent des images en quelques secondes,
+        la peinture manuelle connaît un regain de sens inattendu. Gesture, matière,
+        temps — ce que la main sait que la machine ne peut pas.
+      </p>
+      <div class="feat-author">
+        <div class="avatar">NB</div>
+        <div>
+          <p class="a-name">Nadia Blanc</p>
+          <p class="a-role">Critique d'art</p>
+        </div>
+      </div>
+      <a href="#" class="read-link">Lire l'article →</a>
+    </div>
+  </section>
+
+  <!-- FILTRE THÈMES -->
+  <div class="filter-bar">
+    <span class="fb-label">Thèmes</span>
+    <div class="fb-tags">
+      <button class="fb-btn active">Tout voir</button>
+      <button class="fb-btn">Peinture</button>
+      <button class="fb-btn">Sculpture</button>
+      <button class="fb-btn">Art numérique</button>
+      <button class="fb-btn">Expositions</button>
+      <button class="fb-btn">Marché de l'art</button>
+      <button class="fb-btn">Portrait</button>
+    </div>
+  </div>
+
+  <!-- GRILLE PRINCIPALE + SIDEBAR -->
+  <div class="content-grid">
+    <div class="main-feed">
+      <div class="feed-label">
+        <h3>Articles récents</h3>
+        <div class="fl-line"></div>
+      </div>
+
+      <!-- Article large -->
+      <div class="art-card lg" data-tags="marche-de-l-art">
+        <div class="c-visual">
+          <div class="c-img at1" style="height:260px;">
+            <img src="../Image/at-rebranding.png" alt="Art Basel foire contemporaine" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag hl">Dossier 2026</span>
+            <span class="ctag">Marché de l'art</span>
+          </div>
+          <h2 class="c-title">Art Basel 2025 : les œuvres qui ont redéfini les frontières du marché et du goût</h2>
+          <p class="c-exc">Entre NFTs en chute libre, retour aux maîtres anciens et émergence d'artistes du Sud global, Art Basel 2025 a été le miroir d'un monde de l'art en profonde recomposition. Notre analyse des tendances qui façonneront 2026.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Nadia Blanc</strong></div>
+            <span class="c-rt">15 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 1 -->
+      <div class="art-card" data-tags="sculpture">
+        <div class="c-visual">
+          <div class="c-img at2">
+            <img src="../Image/at-sculpture.png" alt="Sculpture contemporaine monumentale" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags"><span class="ctag">Sculpture</span></div>
+          <h2 class="c-title">Louise Bourgeois à Paris : la rétrospective qui réconcilie l'intime et le monumental</h2>
+          <p class="c-exc">Le Centre Pompidou consacre une exposition fleuve à l'une des sculptrices les plus importantes du XXe siècle. Un parcours vertigineux entre araignées, cellules et confessions.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Marc Delacroix</strong></div>
+            <span class="c-rt">10 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="art-card" data-tags="art-numerique">
+        <div class="c-visual">
+          <div class="c-img at3">
+            <img src="../Image/at-numerique.png" alt="Installation art numérique immersive" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag">Art numérique</span>
+            <span class="ctag">Interview</span>
+          </div>
+          <h2 class="c-title">Refik Anadol : « Les données sont le nouveau marbre »</h2>
+          <p class="c-exc">L'artiste turc dont les installations immersives envahissent les musées du monde entier parle de sa relation avec l'IA, la mémoire collective et l'architecture de l'émotion.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Yuna Kim</strong></div>
+            <span class="c-rt">12 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 3 -->
+      <div class="art-card" data-tags="peinture portrait">
+        <div class="c-visual">
+          <div class="c-img at4">
+            <img src="../Image/at-peinture.png" alt="Peinture figurative contemporaine" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag">Peinture</span>
+            <span class="ctag">Portrait</span>
+          </div>
+          <h2 class="c-title">Lynette Yiadom-Boakye : le roman de ceux qui n'ont jamais existé</h2>
+          <p class="c-exc">La peintre ghanéenne-britannique peuple ses toiles de personnages fictifs d'une présence saisissante. Rencontre avec une artiste qui réinvente la tradition du portrait.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Sophie Beaumont</strong></div>
+            <span class="c-rt">11 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 4 -->
+      <div class="art-card" data-tags="expositions">
+        <div class="c-visual">
+          <div class="c-img at5">
+            <img src="../Image/at-expositions.png" alt="Galerie d'art parisienne" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag">Expositions</span>
+            <span class="ctag">Paris</span>
+          </div>
+          <h2 class="c-title">Les 12 expositions à ne manquer sous aucun prétexte en 2026 à Paris</h2>
+          <p class="c-exc">Du Grand Palais à la Fondation Vuitton, de la Bourse de Commerce au Palais de Tokyo — notre sélection exhaustive de la saison artistique parisienne.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Clara Laurent</strong></div>
+            <span class="c-rt">8 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 5 -->
+      <div class="art-card" data-tags="marche-de-l-art">
+        <div class="c-visual">
+          <div class="c-img at6">
+            <img src="../Image/at-nft.png" alt="NFT art numérique blockchain" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag">Marché de l'art</span>
+            <span class="ctag">Analyse</span>
+          </div>
+          <h2 class="c-title">NFT, deux ans après l'effondrement : ce qui reste et ce qui a changé pour toujours</h2>
+          <p class="c-exc">La bulle a éclaté, mais l'art numérique et la blockchain ont durablement transformé les questions d'authenticité, de propriété et de distribution dans le monde de l'art contemporain.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Thomas Girard</strong></div>
+            <span class="c-rt">13 min</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sb-sec">
+        <p class="sb-title">Tendances</p>
+        <div class="trend-list">
+          <div class="trend-item">
+            <div class="t-num">01</div>
+            <div><p class="t-title">Le retour de la peinture figurative</p><p class="t-meta">Peinture · 8.4K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">02</div>
+            <div><p class="t-title">Art africain contemporain</p><p class="t-meta">Marché · 7.1K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">03</div>
+            <div><p class="t-title">Installations immersives 2026</p><p class="t-meta">Numérique · 5.9K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">04</div>
+            <div><p class="t-title">Céramique d'artiste : la résurgence</p><p class="t-meta">Sculpture · 4.3K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">05</div>
+            <div><p class="t-title">Collect London, bilan</p><p class="t-meta">Foire · 3.6K lectures</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Œuvre du mois -->
+      <div class="sb-sec">
+        <p class="sb-title">Œuvre du mois</p>
+        <div class="artwork-card">
+          <div class="aw-visual">
+            <!-- Abstraction CSS simulant une toile -->
+            <div class="aw-painting">
+              <div class="aw-p1"></div>
+              <div class="aw-p2"></div>
+              <div class="aw-p3"></div>
+            </div>
+          </div>
+          <div class="aw-body">
+            <p class="aw-artist">Cecily Brown</p>
+            <p class="aw-title-work">« The Fugitive Kind »</p>
+            <p class="aw-info">Huile sur lin · 2024<br>Acquise par le MoMA, New York</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nl-side">
+        <p class="nl-tag">Newsletter</p>
+        <h3 class="nl-title">FORMA Weekly</h3>
+        <p class="nl-sub">Chaque lundi, les 5 articles qui ont marqué la semaine dans le monde du design.</p>
+        <div class="nl-form">
+          <input class="nl-inp" type="email" placeholder="votre@email.com">
+          <button class="nl-btn">S'abonner</button>
+        </div>
+      </div>
+
+      <div class="sb-sec">
+        <p class="sb-title">Explorer</p>
+        <div class="tags-cloud">
+          <span class="tag-pill">Peinture</span>
+          <span class="tag-pill">Sculpture</span>
+          <span class="tag-pill">Abstraction</span>
+          <span class="tag-pill">Galeries</span>
+          <span class="tag-pill">Art africain</span>
+          <span class="tag-pill">NFT</span>
+          <span class="tag-pill">Performance</span>
+          <span class="tag-pill">Foires</span>
+          <span class="tag-pill">Collectionneurs</span>
+          <span class="tag-pill">Musées</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- DOSSIER DU MOIS -->
+  <section class="full-feat">
+    <img src="../Image/at-dossier.png" alt="Artistes du Sud global atelier" class="ff-bg-img">
+    <div class="ff-overlay"></div>
+    <div class="ff-inner">
+      <div>
+        <p class="ff-tag">Dossier du mois</p>
+        <h2 class="ff-title">Les artistes<br>du <em>Sud global</em> :<br>un nouveau centre</h2>
+        <p class="ff-text">
+          Lagos, São Paulo, Mumbai, Dakar — le monde de l'art contemporain se reconfigure
+          autour de nouveaux centres de gravité. Des artistes qui ne cherchent plus
+          la validation de l'Occident mais imposent leurs propres termes, leurs propres récits.
+        </p>
+        <a href="#" class="ff-link">Lire le dossier complet →</a>
+      </div>
+      <div class="ff-right">
+        <div class="ff-stat">
+          <div class="ff-num">+78%</div>
+          <div class="ff-label">de ventes d'art africain contemporain en 5 ans</div>
+        </div>
+        <div class="ff-stat">
+          <div class="ff-num">14</div>
+          <div class="ff-label">nouvelles foires d'art majeures hors Europe et USA en 2025</div>
+        </div>
+        <div class="ff-stat">
+          <div class="ff-num">3/5</div>
+          <div class="ff-label">des artistes les plus cotés de moins de 40 ans viennent du Sud</div>
+        </div>
+        <div class="ff-stat">
+          <div class="ff-num">2026</div>
+          <div class="ff-label">Venise recompose pour la première fois sa direction artistique</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="fl">
+      <p class="logo">FOR<span>M</span>A</p>
+      <p>Le magazine de référence du design, de l'architecture et des arts visuels depuis 2010.</p>
+    </div>
+    <div class="fcols">
+      <div class="fcol">
+        <h4>Rubriques</h4>
+        <ul>
+          <li><a href="../Architecture/index.html">Architecture</a></li>
+          <li><a href="../Interieur/index.html">Intérieur</a></li>
+          <li><a href="../Typographie/index.html">Typographie</a></li>
+          <li><a href="../Photographie/index.html">Photographie</a></li>
+          <li><a href="../Marques/index.html">Marques</a></li>
+          <li><a href="index.html">Art</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Magazine</h4>
+        <ul>
+          <li><a href="#">Abonnement</a></li>
+          <li><a href="#">Archives</a></li>
+          <li><a href="#">Équipe</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Confidentialité</a></li>
+          <li><a href="#">CGU</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="fbar">
+    <p>© 2026 FORMA Magazine — Tous droits réservés</p>
+    <p><a href="../index.html" style="color:inherit;text-decoration:none;">← Accueil</a></p>
+  </div>
+
+  <script src="../shared.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

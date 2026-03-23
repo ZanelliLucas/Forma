@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intérieur</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+
+  <!-- BARRE DE PROGRESSION -->
+  <div class="rpbar" id="progress"></div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-logo">FOR<span>M</span>A</div>
+    <div class="nav-cats">
+      <a href="../Architecture/index.html">Architecture</a>
+      <a href="index.html" class="active">Intérieur</a>
+      <a href="../Typographie/index.html">Typographie</a>
+      <a href="../Photographie/index.html">Photographie</a>
+      <a href="../Marques/index.html">Marques</a>
+      <a href="../Art/index.html">Art</a>
+    </div>
+    <div class="nav-right">
+      <button class="btn-theme" id="themeToggle" title="Changer de thème">
+        <span class="btn-theme-icon">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="1" x2="8" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="13" x2="8" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="1" y1="8" x2="3" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="8" x2="15" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="2.93" y1="2.93" x2="4.34" y2="4.34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="11.66" y1="11.66" x2="13.07" y2="13.07" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="2.93" y1="13.07" x2="4.34" y2="11.66" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="11.66" y1="4.34" x2="13.07" y2="2.93" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 10.5A6 6 0 0 1 5.5 2.5a6 6 0 1 0 8 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </span>
+      </button>
+      <button class="btn-sub" id="btnAbonner">S'abonner</button>
+    </div>
+  </nav>
+
+  <!-- EN-TÊTE DE RUBRIQUE -->
+  <div class="section-header">
+    <div class="sh-left">
+      <span class="sh-badge">Rubrique</span>
+      <h1 class="sh-title">Intérieur</h1>
+      <p class="sh-sub">Espaces, matières, atmosphères — l'art de vivre réinventé.</p>
+    </div>
+    <div class="sh-right">
+      <div class="sh-stat"><span class="sh-n">124</span><span class="sh-l">articles</span></div>
+      <div class="sh-stat"><span class="sh-n">18</span><span class="sh-l">dossiers</span></div>
+      <div class="sh-stat"><span class="sh-n">47K</span><span class="sh-l">lecteurs</span></div>
+    </div>
+  </div>
+
+  <!-- ARTICLE À LA UNE -->
+  <section class="featured">
+    <div class="feat-visual feat-visual--img" style="background-image: url('../Image/int-une.png');">
+      <div class="feat-visual-overlay"></div>
+      <div class="feat-label">À la Une</div>
+      <div class="feat-num">01</div>
+    </div>
+    <div class="feat-content">
+      <div class="feat-meta">
+        <span class="cat-tag">Intérieur</span>
+        <span class="msep">·</span>
+        <span class="mdate">3 mars 2026</span>
+        <span class="msep">·</span>
+        <span class="mdate">14 min</span>
+      </div>
+      <h1 class="feat-title">L'appartement<br><em>nu</em> comme<br>manifeste</h1>
+      <p class="feat-excerpt">
+        Dépouiller un espace jusqu'à l'os n'est pas un acte de pauvreté, mais de conviction.
+        Ces intérieurs résolument vides interrogent notre rapport à la possession, à la présence et au silence habité.
+      </p>
+      <div class="feat-author">
+        <div class="avatar">CL</div>
+        <div>
+          <p class="a-name">Clara Laurent</p>
+          <p class="a-role">Rédactrice Intérieur</p>
+        </div>
+      </div>
+      <button class="read-link" data-title="L'appartement nu comme manifeste" data-rt="14">Lire l'article →</button>
+    </div>
+  </section>
+
+  <!-- FILTRE THÈMES -->
+  <div class="filter-bar">
+    <span class="fb-label">Thèmes</span>
+    <div class="fb-tags">
+      <button class="fb-btn active">Tout voir</button>
+      <button class="fb-btn">Minimalisme</button>
+      <button class="fb-btn">Wabi-Sabi</button>
+      <button class="fb-btn">Vintage</button>
+      <button class="fb-btn">Scandinave</button>
+      <button class="fb-btn">Éco-design</button>
+      <button class="fb-btn">Luxe</button>
+    </div>
+  </div>
+
+  <!-- GRILLE PRINCIPALE + SIDEBAR -->
+  <div class="content-grid">
+    <div class="main-feed">
+      <div class="feed-label">
+        <h3>Articles récents</h3>
+        <div class="fl-line"></div>
+      </div>
+
+      <!-- Article large -->
+      <div class="art-card lg">
+        <div class="c-visual">
+          <div class="c-img c-img--photo" style="height:260px; background-image: url('../Image/int-vide-luxe.png');"></div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag hl">Tendances 2026</span>
+            <span class="ctag">Minimalisme</span>
+          </div>
+          <h2 class="c-title">Le retour du vide : quand l'espace devient le vrai luxe contemporain</h2>
+          <p class="c-exc">Dans les grandes villes saturées d'objets et de sollicitations, une nouvelle génération de designers choisit le dépouillement radical comme position esthétique et philosophique.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Clara Laurent</strong></div>
+            <span class="c-rt">11 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 1 -->
+      <div class="art-card">
+        <div class="c-visual">
+          <div class="c-img c-img--photo" style="background-image: url('../Image/int-wabi-sabi.png');"></div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags"><span class="ctag">Wabi-Sabi</span></div>
+          <h2 class="c-title">Céramiques irrégulières et bois flotté : la beauté de l'inachevé envahit nos salons</h2>
+          <p class="c-exc">La philosophie wabi-sabi, née au Japon, dicte désormais les choix des décorateurs européens les plus influents.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Hana Mori</strong></div>
+            <span class="c-rt">7 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="art-card">
+        <div class="c-visual">
+          <div class="c-img c-img--photo" style="background-image: url('../Image/int-lumiere.png');"></div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag">Éclairage</span>
+            <span class="ctag">Interview</span>
+          </div>
+          <h2 class="c-title">Léa Renard : « La lumière, c'est l'architecte invisible de nos émotions »</h2>
+          <p class="c-exc">La designer d'éclairage raconte comment elle sculpte les ambiances dans les hôtels et les résidences privées les plus exigeants.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Marc Delacroix</strong></div>
+            <span class="c-rt">9 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 3 -->
+      <div class="art-card">
+        <div class="c-visual">
+          <div class="c-img c-img--photo" style="background-image: url('../Image/int-vintage.png');"></div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag">Vintage</span>
+          </div>
+          <h2 class="c-title">Le mobilier des années 50–70 : guide pour chiner sans se faire piéger</h2>
+          <p class="c-exc">Knoll, Cassina, Eames — le marché du vintage de qualité explose. Nos experts décryptent les pièges et les bonnes adresses.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Thomas Girard</strong></div>
+            <span class="c-rt">8 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 4 -->
+      <div class="art-card">
+        <div class="c-visual">
+          <div class="c-img c-img--photo" style="background-image: url('../Image/int-ecodesign.png');"></div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags">
+            <span class="ctag">Éco-design</span>
+            <span class="ctag">Matériaux</span>
+          </div>
+          <h2 class="c-title">Mycelium, liège, béton de chanvre : les nouveaux matériaux qui réinventent nos murs</h2>
+          <p class="c-exc">L'innovation bio-sourcée quitte les laboratoires pour entrer dans nos foyers. Tour d'horizon des matériaux qui transforment nos intérieurs.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Sonia Lefebvre</strong></div>
+            <span class="c-rt">10 min</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 5 -->
+      <div class="art-card">
+        <div class="c-visual">
+          <div class="c-img c-img--photo" style="background-image: url('../Image/int-scandinave.png');"></div>
+        </div>
+        <div class="c-body">
+          <div class="c-tags"><span class="ctag">Scandinave</span></div>
+          <h2 class="c-title">Hygge 2.0 : comment la Scandinavie réinvente encore une fois l'art de se sentir bien chez soi</h2>
+          <p class="c-exc">Au-delà des bougies et des plaids, le hygge évolue vers une philosophie spatiale plus exigeante et plus sincère.</p>
+          <div class="c-foot">
+            <div class="c-auth">Par <strong>Ingrid Skov</strong></div>
+            <span class="c-rt">6 min</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sb-sec">
+        <p class="sb-title">Tendances</p>
+        <div class="trend-list">
+          <div class="trend-item">
+            <div class="t-num">01</div>
+            <div><p class="t-title">Le grand retour du terrazzo</p><p class="t-meta">Matériaux · 5.1K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">02</div>
+            <div><p class="t-title">Couleurs Pantone 2026 chez soi</p><p class="t-meta">Couleur · 4.3K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">03</div>
+            <div><p class="t-title">Arcs et voûtes dans le résidentiel</p><p class="t-meta">Architecture · 3.7K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">04</div>
+            <div><p class="t-title">Micro-appartements bien pensés</p><p class="t-meta">Espace · 2.9K lectures</p></div>
+          </div>
+          <div class="trend-item">
+            <div class="t-num">05</div>
+            <div><p class="t-title">Plantes XXL et jungle urbaine</p><p class="t-meta">Végétal · 2.4K lectures</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sélection rédac' -->
+      <div class="sb-sec editorial-pick">
+        <p class="sb-title">Sélection rédac'</p>
+        <div class="ep-card">
+          <div class="ep-visual c-img--photo" style="background-image: url('../Image/int-perriand.png'); background-size: cover; background-position: center;"></div>
+          <div class="ep-body">
+            <p class="ep-cat">Luxe · Portrait</p>
+            <p class="ep-ttl">L'appartement impossible de Charlotte Perriand revisité</p>
+            <p class="ep-rt">13 min</p>
+          </div>
+        </div>
+        <div class="ep-card">
+          <div class="ep-visual c-img--photo" style="background-image: url('../Image/int-studio-durable.png'); background-size: cover; background-position: center;"></div>
+          <div class="ep-body">
+            <p class="ep-cat">Éco-design</p>
+            <p class="ep-ttl">10 studios qui prouvent qu'habiter durable est beau</p>
+            <p class="ep-rt">8 min</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nl-side">
+        <p class="nl-tag">Newsletter</p>
+        <h3 class="nl-title">FORMA Weekly</h3>
+        <p class="nl-sub">Chaque lundi, les 5 articles qui ont marqué la semaine dans le monde du design.</p>
+        <div class="nl-form">
+          <input class="nl-inp" type="email" placeholder="votre@email.com">
+          <button class="nl-btn">S'abonner</button>
+        </div>
+      </div>
+
+      <div class="sb-sec">
+        <p class="sb-title">Explorer</p>
+        <div class="tags-cloud">
+          <span class="tag-pill">Wabi-Sabi</span>
+          <span class="tag-pill">Terrazzo</span>
+          <span class="tag-pill">Scandinave</span>
+          <span class="tag-pill">Loft</span>
+          <span class="tag-pill">Couleur</span>
+          <span class="tag-pill">Textiles</span>
+          <span class="tag-pill">Vintage</span>
+          <span class="tag-pill">Bio-matières</span>
+          <span class="tag-pill">Lumière</span>
+          <span class="tag-pill">Céramique</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- DOSSIER DU MOIS -->
+  <section class="full-feat" style="background-image: url('../Image/int-dossier-nature.png');">
+    <div class="full-feat-overlay"></div>
+    <div class="full-feat-content">
+      <p class="ff-tag">Dossier du mois</p>
+      <h2 class="ff-title">Intérieurs<br><em>sauvages</em> :<br>nature dedans</h2>
+      <p class="ff-text">
+        Plantes géantes, matières vivantes, lumière naturelle maîtrisée — les architectes d'intérieur font entrer le dehors chez nous
+        avec une sophistication inédite. Biophilie, résilience, beauté brute.
+      </p>
+      <button class="ff-link" data-title="Intérieurs sauvages : nature dedans" data-rt="16">Lire le dossier complet →</button>
+    </div>
+    <div class="ff-right">
+      <div class="ff-stat">
+        <div class="ff-num">63%</div>
+        <div class="ff-label">des projets intègrent le végétal comme matériau principal</div>
+      </div>
+      <div class="ff-stat">
+        <div class="ff-num">28</div>
+        <div class="ff-label">studios pionniers de l'intérieur biophilique</div>
+      </div>
+      <div class="ff-stat">
+        <div class="ff-num">+40%</div>
+        <div class="ff-label">de demandes pour les matières naturelles brutes</div>
+      </div>
+      <div class="ff-stat">
+        <div class="ff-num">2026</div>
+        <div class="ff-label">l'année où la nature entre vraiment dans nos maisons</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="fl">
+      <p class="logo">FOR<span>M</span>A</p>
+      <p>Le magazine de référence du design, de l'architecture et des arts visuels depuis 2010.</p>
+    </div>
+    <div class="fcols">
+      <div class="fcol">
+        <h4>Rubriques</h4>
+        <ul>
+          <li><a href="../Architecture/index.html">Architecture</a></li>
+          <li><a href="index.html">Intérieur</a></li>
+          <li><a href="../Typographie/index.html">Typographie</a></li>
+          <li><a href="../Photographie/index.html">Photographie</a></li>
+          <li><a href="../Marques/index.html">Marques</a></li>
+          <li><a href="../Art/index.html">Art</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Magazine</h4>
+        <ul>
+          <li><a href="#" class="footer-link" data-modal="abonnement">Abonnement</a></li>
+          <li><a href="#" class="footer-link" data-modal="archives">Archives</a></li>
+          <li><a href="#" class="footer-link" data-modal="equipe">Équipe</a></li>
+          <li><a href="#" class="footer-link" data-modal="contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="#" class="footer-link" data-modal="mentions">Mentions légales</a></li>
+          <li><a href="#" class="footer-link" data-modal="confidentialite">Confidentialité</a></li>
+          <li><a href="#" class="footer-link" data-modal="cgu">CGU</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="fbar">
+    <p>© 2026 FORMA Magazine — Tous droits réservés</p>
+    <p><a href="../index.html" style="color:inherit;text-decoration:none;">← Accueil</a></p>
+  </div>
+
+
+  <!-- ═══ MODAL ARTICLE ═══ -->
+  <div class="modal-overlay" id="articleOverlay">
+    <div class="modal-box">
+      <button class="modal-close" data-close="article">✕</button>
+      <div class="modal-inner">
+        <p class="modal-eyebrow">Intérieur — FORMA Magazine</p>
+        <h2 class="modal-title" id="articleTitle">Titre</h2>
+        <div class="modal-meta">
+          <span>Mars 2026</span>
+          <span class="modal-sep">·</span>
+          <span id="articleRt">10 min de lecture</span>
+        </div>
+        <div class="modal-body">
+          <p>Vous lisez un aperçu de cet article. Le contenu intégral — reportages, analyses et références — est réservé aux abonnés FORMA.</p>
+          <p>FORMA est un magazine indépendant fondé en 2010, lu par 47 000 passionnés d'intérieur chaque mois.</p>
+        </div>
+        <button class="modal-cta" id="articleSubBtn">Lire l'article complet — S'abonner →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MODAL ABONNEMENT ═══ -->
+  <div class="modal-overlay" id="subOverlay">
+    <div class="modal-box modal-wide">
+      <button class="modal-close" data-close="sub">✕</button>
+      <div class="modal-inner">
+        <p class="modal-eyebrow">Rejoindre FORMA</p>
+        <h2 class="modal-title">Choisissez votre formule</h2>
+        <p class="modal-desc">Accès illimité aux articles, archives depuis 2010, newsletter hebdomadaire.</p>
+        <div class="sub-plans">
+          <div class="sub-plan" id="planMensuel">
+            <p class="plan-name">Mensuel</p>
+            <p class="plan-price">9 <span>€/mois</span></p>
+            <ul>
+              <li>✓ Tous les articles</li>
+              <li>✓ Newsletter</li>
+              <li>✓ Application mobile</li>
+            </ul>
+          </div>
+          <div class="sub-plan sub-plan--featured" id="planAnnuel">
+            <p class="plan-name">Annuel <span class="plan-promo">−30%</span></p>
+            <p class="plan-price">75 <span>€/an</span></p>
+            <ul>
+              <li>✓ Tous les articles</li>
+              <li>✓ Newsletter</li>
+              <li>✓ Application mobile</li>
+              <li>✓ Archives complètes 2010–2026</li>
+              <li>✓ Magazine papier (12 numéros)</li>
+            </ul>
+          </div>
+        </div>
+        <div id="subFormWrap">
+          <input class="modal-input" type="email" id="subEmail" placeholder="votre@email.com">
+          <button class="modal-cta" id="subSubmit">Commencer mon abonnement →</button>
+          <p class="sub-legal">Sans engagement · Résiliation en 1 clic · Paiement sécurisé</p>
+        </div>
+        <p class="sub-ok" id="subOk" style="display:none;">✓ Merci ! Un email de confirmation arrive dans votre boîte.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MODAL INFO ═══ -->
+  <div class="modal-overlay" id="infoOverlay">
+    <div class="modal-box">
+      <button class="modal-close" data-close="info">✕</button>
+      <div class="modal-inner">
+        <p class="modal-eyebrow" id="infoEyebrow">FORMA</p>
+        <h2 class="modal-title" id="infoTitle"></h2>
+        <div class="modal-body" id="infoBody"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../shared.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
