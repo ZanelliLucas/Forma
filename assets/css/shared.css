@@ -1,5 +1,5 @@
 /* ============================================================
-   FORMA Magazine — shared.css
+   FORMA Magazine — assets/css/shared.css
    Variables de thème + bouton toggle — importé par toutes les pages
    ============================================================ */
 
@@ -137,6 +137,12 @@ body, nav, .section-header, .feat-content, .filter-bar,
   /* Les style.css passent nav en position:relative sur mobile :
      le burger disparaissait au scroll, la barre de progression flottait */
   nav { position: sticky; }
+}
+
+/* ── Focus clavier visible (liens, boutons, cartes cliquables) ── */
+a:focus-visible, button:focus-visible, input:focus-visible, [role="button"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 /* ── Barre de pied de page ──

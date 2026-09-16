@@ -1,5 +1,5 @@
 /* ============================================================
-   FORMA Magazine — shared.js
+   FORMA Magazine — assets/js/shared.js
    Chargé par toutes les pages (accueil comprise) :
    thème, progression, menu mobile, modales, filtres, newsletter
    Le thème sauvegardé est appliqué par un petit script dans <head>
@@ -79,6 +79,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const slug     = s => s.trim().toLowerCase()
     .normalize('NFD').replace(/[\u0300-\u036f]/g, '')      // supprime accents
     .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); // « Marché de l'art » → marche-de-l-art
+
+  // Cartes, étiquettes, formules : div/span cliquables → utilisables au clavier
+  function makeKeyboardClickable(el) {
+    if (el.matches('a, button')) return;
+    el.tabIndex = 0;
+    el.setAttribute('role', 'button');
+    el.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+    });
+  }
 
   function showToast(msg) {
     const t = document.createElement('div');
@@ -222,6 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function bindArticle(selector, getInfo) {
     document.querySelectorAll(selector).forEach(el => {
       el.style.cursor = 'pointer';
+      makeKeyboardClickable(el);
       el.addEventListener('click', e => {
         e.preventDefault();
         const info = getInfo(el);
@@ -257,6 +268,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.querySelectorAll('.sub-plan').forEach(plan => {
+    makeKeyboardClickable(plan);
     plan.addEventListener('click', () => {
       document.querySelectorAll('.sub-plan').forEach(p => p.classList.remove('sub-plan--selected'));
       plan.classList.add('sub-plan--selected');
@@ -379,6 +391,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Pills : filtre si le thème existe, sinon « bientôt disponible »
     pills.forEach(pill => {
+      makeKeyboardClickable(pill);
       pill.addEventListener('click', () => {
         const key = keyOf(pill);
         if (keys.includes(key)) {
