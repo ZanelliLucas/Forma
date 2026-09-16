@@ -237,9 +237,10 @@ nav {
 }
 .rub-card:hover { background: var(--black); color: var(--bg); }
 .rub-card:hover .rub-name { color: var(--bg); }
-.rub-card:hover .rub-desc { color: rgba(248,248,245,0.5); }
+/* color-mix sur var(--bg) : reste lisible quand le fond de survol s'inverse en dark */
+.rub-card:hover .rub-desc { color: color-mix(in srgb, var(--bg) 55%, transparent); }
 .rub-card:hover .rub-link { color: var(--accent); }
-.rub-card:hover .rub-num { color: rgba(255,255,255,0.06); }
+.rub-card:hover .rub-num { color: color-mix(in srgb, var(--bg) 8%, transparent); }
 
 .rub-visual {
   height: 180px; position: relative;

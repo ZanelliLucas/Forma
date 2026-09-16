@@ -134,4 +134,140 @@ body, nav, .section-header, .feat-content, .filter-bar,
 
 @media (max-width: 768px) {
   .btn-burger { display: flex; }
+  /* Les style.css passent nav en position:relative sur mobile :
+     le burger disparaissait au scroll, la barre de progression flottait */
+  nav { position: sticky; }
+}
+
+/* ── Barre de pied de page ──
+   Fond sombre dans les deux thèmes (var(--black) devenait crème en dark,
+   le texte blanc était illisible) */
+.fbar { background: var(--fbar-bg); }
+
+/* ══════════════════════════════
+   MODALES & INTERACTIVITÉ (toutes les pages)
+══════════════════════════════ */
+
+/* read-link / ff-link peuvent être des <button> : reset */
+.read-link, .ff-link { background: none; border-top: none; border-left: none; border-right: none; }
+
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 500;
+  background: rgba(0,0,0,.72);
+  align-items: center; justify-content: center;
+  padding: 20px;
+}
+.modal-box {
+  background: var(--bg); color: var(--black);
+  max-width: 520px; width: 100%;
+  max-height: 90vh; overflow-y: auto;
+  position: relative;
+  border-top: 3px solid var(--accent);
+  animation: modal-pop .22s ease;
+  transition: background 0.3s, color 0.3s;
+}
+.modal-wide { max-width: 660px; }
+@keyframes modal-pop {
+  from { transform: translateY(18px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+.modal-close {
+  position: absolute; top: 14px; right: 14px;
+  width: 30px; height: 30px;
+  background: var(--light); border: none; color: var(--black);
+  font-size: 13px; cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.modal-close:hover { background: var(--accent); color: #fff; }
+.modal-inner { padding: 38px; }
+.modal-eyebrow {
+  font-size: 9px; font-weight: 500; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+}
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700; line-height: 1.2;
+  letter-spacing: -.3px; margin-bottom: 12px;
+  color: var(--black); transition: color 0.3s;
+}
+.modal-meta { display: flex; gap: 10px; margin-bottom: 20px; }
+.modal-meta span, .modal-sep { font-size: 11px; color: var(--gray); }
+.modal-body p {
+  font-size: 13px; line-height: 1.8;
+  color: var(--mid); margin-bottom: 12px;
+  transition: color 0.3s;
+}
+.modal-body strong { color: var(--black); font-weight: 500; transition: color 0.3s; }
+.modal-desc { font-size: 13px; color: var(--gray); margin-bottom: 24px; line-height: 1.6; }
+.modal-cta {
+  display: block; width: 100%; padding: 13px;
+  background: var(--accent); color: #fff; border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase;
+  cursor: pointer; margin-top: 20px; transition: background .2s;
+}
+.modal-cta:hover { background: #e03d00; }
+.modal-cta:disabled { background: var(--gray); cursor: default; }
+.modal-input {
+  width: 100%; padding: 13px 16px;
+  border: 1px solid var(--light); background: var(--bg);
+  color: var(--black); font-family: 'DM Sans', sans-serif;
+  font-size: 13px; outline: none; margin-top: 16px;
+  transition: border-color .2s, background 0.3s, color 0.3s;
+}
+.modal-input:focus { border-color: var(--accent); }
+.modal-input::placeholder { color: var(--gray); }
+
+.sub-plans { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+.sub-plan {
+  padding: 20px; border: 1px solid var(--light);
+  cursor: pointer; transition: border-color .2s, background 0.3s;
+}
+.sub-plan:hover { border-color: var(--accent); }
+.sub-plan--featured { border-color: var(--accent); background: rgba(255,69,0,.04); }
+.sub-plan--selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.plan-name {
+  font-size: 9px; font-weight: 500; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--gray); margin-bottom: 10px;
+}
+.plan-promo {
+  background: var(--accent); color: #fff;
+  padding: 1px 6px; font-size: 8px; margin-left: 4px;
+}
+.plan-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px; font-weight: 900; color: var(--black);
+  line-height: 1; margin-bottom: 14px; transition: color 0.3s;
+}
+.plan-price span { font-size: 12px; font-weight: 400; color: var(--gray); }
+.sub-plan ul { list-style: none; }
+.sub-plan li { font-size: 11px; color: var(--mid); margin-bottom: 5px; transition: color 0.3s; }
+.sub-legal { font-size: 11px; color: var(--gray); margin-top: 10px; text-align: center; }
+.sub-ok {
+  font-size: 13px; font-weight: 500; color: var(--accent);
+  padding: 14px; border: 1px solid rgba(255,69,0,.2);
+  background: rgba(255,69,0,.04); margin-top: 16px; text-align: center;
+}
+
+.nl-confirm { font-size: 12px; color: var(--accent); font-weight: 500; margin: 10px 0; }
+
+.no-results { padding: 50px 40px; align-items: center; justify-content: center; }
+.no-results p { font-size: 14px; color: var(--gray); font-style: italic; }
+
+.pill-active { border-color: var(--accent) !important; color: var(--accent) !important; }
+
+.forma-toast {
+  position: fixed; bottom: 30px; left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--black); color: var(--bg);
+  padding: 10px 22px; font-size: 12px; letter-spacing: .5px;
+  z-index: 9999; opacity: 0;
+  transition: opacity .25s, transform .25s;
+  pointer-events: none; white-space: nowrap;
+}
+.forma-toast.toast-in { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+@media (max-width: 500px) {
+  .modal-inner { padding: 24px 18px; }
+  .sub-plans { grid-template-columns: 1fr; }
 }
